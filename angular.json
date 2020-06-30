@@ -119,6 +119,10 @@
               "devServerTarget": "evidencija-radnika:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "evidencija-radnika-8d784": {
+      "hosting": {
+        "evidencija-radnika": [
+          "evidencija-radnika-8d784"
+        ]
+      }
+    }
+  }
+}
