@@ -1,0 +1,11 @@
+.mat-card-title {
+  text-align: center;
+}
+.mat-form-field {
+  display: flex;
+}
+.mat-card-content {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
