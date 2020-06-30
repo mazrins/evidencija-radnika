@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RegisterService {
+  constructor() {}
 
-  constructor() { }
+  // angularFireRegister(email, password) {
+  //   // this.afAuth.createUserWithEmailAndPassword(email, password);
+  //   console.log("register")
+  // }
 }

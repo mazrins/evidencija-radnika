@@ -14,9 +14,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ProfileComponent } from './profile/profile.component';
+import { environment } from 'src/environments/environment';
+
+import { AngularFireModule } from '@angular/fire';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, ProfileComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,7 +36,10 @@ import { ProfileComponent } from './profile/profile.component';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
+
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
+
   providers: [],
   bootstrap: [AppComponent],
 })

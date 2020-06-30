@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { RegisterService } from '../services/register.service';
 
 @Component({
   selector: 'app-register',
@@ -15,10 +16,7 @@ export class RegisterComponent implements OnInit {
     password: new FormControl('', Validators.required),
   });
 
-  onRegisterSubmit() {
-    this.router.navigate(['login']);
-    console.log('Submit');
-  }
+  onRegisterSubmit() {}
 
   ngOnInit(): void {}
 }
