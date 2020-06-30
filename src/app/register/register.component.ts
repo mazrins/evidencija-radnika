@@ -9,14 +9,17 @@ import { RegisterService } from '../services/register.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private registerService: RegisterService) {}
 
   registerForm = new FormGroup({
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
   });
 
-  onRegisterSubmit() {}
+  onRegisterSubmit() {
+    const { email, password } = this.registerForm.value;
+    this.registerService.angularFireRegister(email, password);
+  }
 
   ngOnInit(): void {}
 }

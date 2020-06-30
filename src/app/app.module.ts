@@ -17,6 +17,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { environment } from 'src/environments/environment';
 
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AngularFireModule } from '@angular/fire';
     MatIconModule,
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
   ],
 
   providers: [],
