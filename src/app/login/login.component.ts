@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  constructor(private loginService: LoginService) {}
 
   loginForm = new FormGroup({
     email: new FormControl(''),
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
   });
 
   onLoginSubmit() {
-    console.log('Prijava');
+    const { email, password } = this.loginForm.value;
+    this.loginService.angularFireLogin(email, password);
   }
 
   ngOnInit(): void {}
