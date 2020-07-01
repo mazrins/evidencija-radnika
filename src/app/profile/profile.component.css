@@ -1,0 +1,12 @@
+.mat-card-title {
+  text-align: center;
+}
+.mat-form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-radio-button {
+  margin-right: 16px;
+}

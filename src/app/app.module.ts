@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ProfileComponent } from './profile/profile.component';
 import { environment } from 'src/environments/environment';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -37,6 +38,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
+    MatRadioModule,
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
