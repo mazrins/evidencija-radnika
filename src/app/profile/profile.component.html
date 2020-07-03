@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-title>Profil</mat-card-title>
   <mat-content
-    ><form [formGroup]="profileForm">
+    ><form [formGroup]="profileForm" (ngSubmit)="onProfileSubmit()">
       <mat-form-field>
         <mat-label>Ime :</mat-label>
         <input matInput type="text" formControlName="firstName" />
@@ -10,10 +10,26 @@
         <mat-label>Prezime : </mat-label>
         <input matInput type="text" formControlName="lastName" />
       </mat-form-field>
+      <mat-form-field>
+        <mat-label>Broj mobitela :</mat-label>
+        <input type="number" matInput formControlName="phone" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Izaberite datum</mat-label>
+        <input matInput [matDatepicker]="picker" />
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
       <mat-radio-group>
         <mat-radio-button value="1">Žensko</mat-radio-button>
         <mat-radio-button value="2">Muško</mat-radio-button>
       </mat-radio-group>
-    </form></mat-content
-  >
+      <mat-card-actions>
+        <button mat-raised-button color="warn" type="reset">Odustani</button>
+        <button mat-raised-button color="primary" type="submit">Spremi</button>
+      </mat-card-actions>
+    </form>
+  </mat-content>
 </mat-card>

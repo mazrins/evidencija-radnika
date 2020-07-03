@@ -16,9 +16,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { ProfileComponent } from './profile/profile.component';
 import { environment } from 'src/environments/environment';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     MatButtonModule,
     MatIconModule,
     MatRadioModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatNativeDateModule,
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,

@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProfileService {
+  constructor(private db: AngularFirestore) {}
 
-  constructor() { }
+  profileSubmit(profileForm) {
+    console.log(profileForm);
+  }
 }

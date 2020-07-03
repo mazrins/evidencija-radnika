@@ -4,11 +4,12 @@
     <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <input matInput formControlName="email" required />
+        <input matInput formControlName="email" />
+        <mat-error>Unesena adresa nije valjana.</mat-error>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Lozinka</mat-label>
-        <input matInput formControlName="password" type="password" required />
+        <input matInput formControlName="password" type="password" />
       </mat-form-field>
 
       <mat-card-actions
