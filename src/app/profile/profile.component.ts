@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ProfileService } from '../services/profile.service';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,7 +9,7 @@ import { ProfileService } from '../services/profile.service';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-  constructor(private profileService: ProfileService) {}
+  constructor(private loginService: LoginService) {}
 
   profileForm = new FormGroup({
     firstName: new FormControl('', Validators.required),
@@ -17,7 +18,7 @@ export class ProfileComponent implements OnInit {
   });
 
   onProfileSubmit() {
-    this.profileService.profileSubmit(this.profileForm.value);
+    this.loginService.profileUpdate(this.profileForm.value);
   }
 
   ngOnInit(): void {}

@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
-mat-radio-button {
+.mat-radio-button {
   margin-right: 16px;
+}
+
+.mat-card-actions {
+  text-align: center;
 }
