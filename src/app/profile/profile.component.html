@@ -4,11 +4,13 @@
     <form [formGroup]="profileForm" (ngSubmit)="onProfileSubmit()">
       <mat-form-field>
         <mat-label>Ime :</mat-label>
-        <input matInput type="text" formControlName="firstName" />
+        <input matInput type="text" formControlName="firstName" required />
+        <mat-error>Unesite Vaše ime.</mat-error>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Prezime : </mat-label>
-        <input matInput type="text" formControlName="lastName" />
+        <input matInput type="text" formControlName="lastName" required />
+        <mat-error>Unesite Vaše prezime.</mat-error>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Broj mobitela :</mat-label>
@@ -18,9 +20,8 @@
         <mat-label>Datum rođenja</mat-label>
         <input matInput [matDatepicker]="picker" />
         <mat-datepicker-toggle matSuffix [for]="picker">
-          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
         </mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+        <mat-datepicker #picker touchUi="true"></mat-datepicker>
       </mat-form-field>
       <mat-radio-group>
         <mat-label>Spol : </mat-label>

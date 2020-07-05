@@ -9,12 +9,19 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Lozinka</mat-label>
-        <input matInput formControlName="password" type="password" required />
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          required
+          minlength="6"
+        />
         <mat-error>Lozinka nije važeća ili korisnik ne postoji.</mat-error>
       </mat-form-field>
 
-      <mat-card-actions
-        ><button
+      <mat-card-actions>
+        <a mat-stroked-button routerLink="register">Registracija</a>
+        <button
           mat-raised-button
           type="submit"
           color="primary"
@@ -23,8 +30,6 @@
           Prijava
         </button>
       </mat-card-actions>
-
-      <a routerLink="register">Registracija</a>
     </form>
   </mat-card-content>
 </mat-card>

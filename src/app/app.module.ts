@@ -22,6 +22,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { MatNativeDateModule } from '@angular/material/core';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
