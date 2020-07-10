@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ProfileService } from '../services/profile.service';
-import { LoginService } from '../services/login.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +9,8 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-  constructor(private loginService: LoginService) {}
+  constructor(private auth: AuthService, private db: AngularFirestore) {}
+  users$;
 
   profileForm = new FormGroup({
     firstName: new FormControl('', Validators.required),
@@ -17,8 +18,14 @@ export class ProfileComponent implements OnInit {
     phone: new FormControl(''),
   });
 
-  onProfileSubmit() {
-    this.loginService.profileUpdate(this.profileForm.value);
+  onLogin(email: string, password: string) {
+    this.auth.login(email, password);
+  }
+
+  onProfileSubmit() {}
+  getUsers() {
+    this.users$ = this.db.collection('users').get();
+    console.log(this.users$);
   }
 
   ngOnInit(): void {}

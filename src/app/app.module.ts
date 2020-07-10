@@ -18,6 +18,7 @@ import { environment } from 'src/environments/environment';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -47,6 +48,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatDatepickerModule,
     MatSelectModule,
     MatNativeDateModule,
+    MatToolbarModule,
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,

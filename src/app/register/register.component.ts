@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { RegisterService } from '../services/register.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,16 +8,16 @@ import { RegisterService } from '../services/register.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  constructor(private registerService: RegisterService) {}
+  constructor(private auth: AuthService) {}
 
   registerForm = new FormGroup({
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
   });
 
-  onRegisterSubmit() {
+  onRegister() {
     const { email, password } = this.registerForm.value;
-    this.registerService.angularFireRegister(email, password);
+    this.auth.register(email, password);
   }
 
   ngOnInit(): void {}

@@ -30,7 +30,14 @@
       </mat-radio-group>
       <mat-card-actions>
         <button mat-raised-button color="warn" type="reset">Odustani</button>
-        <button mat-raised-button color="primary" type="submit">Spremi</button>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="getUsers()"
+          type="submit"
+        >
+          Spremi
+        </button>
       </mat-card-actions>
     </form>
   </mat-card-content>
