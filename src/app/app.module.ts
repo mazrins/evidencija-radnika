@@ -24,6 +24,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegisterComponent,
     ProfileComponent,
     NavbarComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
