@@ -2,11 +2,21 @@
   <mat-toolbar color="primary">
     <button
       mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
     >
       <mat-icon>menu</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="dashboardNavigation()">
+        <mat-icon>dashboard</mat-icon>
+        <span>Početna</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>settings_applications</mat-icon>
+        <span>Postavke</span>
+      </button>
+    </mat-menu>
     <span>Aplikacija</span>
     <span class="example-spacer"></span>
 

@@ -19,12 +19,16 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserComponent } from './user/user.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,7 @@ import { UserComponent } from './user/user.component';
     ProfileComponent,
     NavbarComponent,
     UserComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +56,9 @@ import { UserComponent } from './user/user.component';
     MatSelectModule,
     MatNativeDateModule,
     MatToolbarModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatListModule,
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
